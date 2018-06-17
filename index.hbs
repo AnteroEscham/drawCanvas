@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;amp;subset=cyrillic-ext" />
+    <title>Рисовалка</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <canvas class="canvas" id="canvas"></canvas>
+
+        <div class="burger">
+            <div class="burger__row"></div>
+            <div class="burger__row"></div>
+            <div class="burger__row"></div>
+        </div>
+        <div class="canvas-bar">
+            <div class="close">
+                <div class="close__row close__row--left"></div>
+                <div class="close__row close__row--right"></div>
+            </div>
+            <div class="canvas-bar__color">
+                <div class="canvas-bar__title">Цвет пера:</div>
+                <label  class="canvas-bar__color-label">
+                    <input type="color" class="canvas-bar__color-input">
+                </label>
+            </div>
+
+            <div class="canvas-bar__stroke">
+                <div class="canvas-bar__title">Толщина пера:</div>
+                <div class="canvas-bar__stroke-controls">
+                    <input type="range" value="10" max="40" min="3" class="canvas-bar__stroke-width">
+                    <div class="canvas-bar__stroke-thumb"></div>
+                </div>
+            </div>
+
+            <div class="canvas-bar__fill">
+                <div class="canvas-bar__title">Фон:</div>
+                <label class="canvas-bar__fill-label">
+                    <input type="color" class="canvas-bar__fill-input">
+                </label>
+            </div>
+
+            <div class="canvas-bar__clear">
+                
+                <button class="canvas-bar__clear-btn">Очистить холст</button>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

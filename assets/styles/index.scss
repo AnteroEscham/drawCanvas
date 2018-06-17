@@ -1,0 +1,18 @@
+//variables
+$red: #ff8663;
+$overlay: rgba(#000, 0.4);
+$grey: #f0f0f0;
+$grey-font: #4f4f4f;
+
+$font: 'Fira Sans', sans-serif;
+
+//config
+@import "config/mixins.scss";
+@import "config/base.scss";
+@import "config/normalize.scss";
+
+//layout
+@import "layout/adjustment.scss";
+
+//blocks
+@import "blocks/canvas"

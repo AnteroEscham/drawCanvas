@@ -1,0 +1,160 @@
+.canvas {
+    
+    background-color: $grey;
+    cursor: crosshair;
+    z-index: 1;
+    touch-action: none;
+}
+
+.canvas-bar {
+    width: rem(250px);
+    min-height: rem(200px);
+    border: 3px solid $red;
+    position: fixed;
+    right: 0;
+    top: -500px;
+    padding: rem(10px);
+    z-index: 6000;
+    background-color: $grey;
+    transition: 0.3s;
+    touch-action: none;
+
+    &--active {
+        top: 0;
+    }
+
+    &__title {
+
+        margin-bottom: rem(10px);
+        margin-top: rem(10px);
+    }
+
+
+    &__clear {
+
+        &-btn {
+
+            border: none;
+            color: #fff;
+            background-color: $red;
+            padding: rem(10px) rem(20px);
+            display: block;
+            width: 100%;
+            margin-top: rem(20px);
+            cursor: pointer;
+        }
+    }
+
+    &__color {
+
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            @include circle(rem(30px), #000000);
+            display: block;
+            // cursor: pointer;
+            border: 2px solid $red;
+        }
+    }
+
+    &__fill {
+
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            @include circle(rem(30px), $grey);
+            display: block;
+            // cursor: pointer;
+            border: 2px solid $red;
+        }
+    }
+
+    &__stroke {
+        
+        // height: 40px;
+
+        &-controls {
+            position: relative;
+        }
+        &-thumb {
+            @include circle(rem(10px), #000);
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(50%, -50%);
+            top: 50%;
+            right: 20%;
+
+            @include md {
+                right: 10%;
+            }
+        }
+    }
+
+    &__stroke-width {
+        display: inline-block;
+        vertical-align: middle;
+
+        @include md {
+            width: 60%;
+        }
+    }
+    
+}
+
+
+.burger {
+    width: rem(40px);
+    height: rem(30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 10;
+    cursor: pointer;
+    // background-color: $grey;
+
+    &__row {
+        width: 100%;
+        height: rem(5px);
+        background-color: $red;
+    }
+}
+
+.close{
+    position: absolute;
+    display: inline-block;
+    width: rem(30px);
+    height: rem(30px);
+    overflow: hidden;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        background: $red;
+    }
+    &::before {
+        @include transform(rotate(45deg));
+    }
+    &::after {
+        @include transform(rotate(-45deg));
+    }
+
+}
